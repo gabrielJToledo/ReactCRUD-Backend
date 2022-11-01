@@ -7,4 +7,7 @@ module.exports = app => {
     app.route('/:id')
         .put(form.updateFormValues)
         .delete(form.deleteUserForm)
+        
+    app.route('/users')
+        .get(form.getUsers)
 }

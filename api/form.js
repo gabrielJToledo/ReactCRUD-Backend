@@ -38,6 +38,9 @@ const deleteUserForm = async (req, res) => {
 
 const getUsers = async (req, res) => {
     
-}
+    const users = await FormSchema.Form.find()
 
-module.exports = { saveFormValues, updateFormValues, deleteUserForm }
+    res.status(200).send(users)
+}   
+
+module.exports = { saveFormValues, updateFormValues, deleteUserForm, getUsers }
